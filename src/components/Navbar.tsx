@@ -48,7 +48,7 @@ export default function Navbar() {
             Dra. Noelia Palermo
           </span>
           <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.28em] text-ink-faint">
-            Odontología
+            Odontología y Ortodoncia
           </span>
         </Link>
 

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { fadeUp, stagger, viewport } from '../lib/motion'
 
@@ -42,8 +43,8 @@ export default function About() {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-9">
-            <a
-              href="#tratamientos"
+            <Link
+              to="/sobre-mi"
               className="group inline-flex items-center gap-2 rounded-full border border-sage-300/70 bg-cream py-3.5 pl-6 pr-5 text-[14.5px] font-medium text-ink transition-all duration-300 hover:border-sage-400 hover:bg-white"
             >
               Conóceme mejor
@@ -52,7 +53,7 @@ export default function About() {
                 strokeWidth={2}
                 className="text-sage-600 transition-transform duration-300 group-hover:translate-x-0.5"
               />
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 
