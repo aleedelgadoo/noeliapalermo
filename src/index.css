@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "General Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Ranade", "General Sans", ui-sans-serif, -apple-system, sans-serif;
+
+  --color-cream: #faf9f5;
+  --color-paper: #f5f4ef;
+  --color-ink: #1c1d1a;
+  --color-ink-soft: #5c5d57;
+  --color-ink-faint: #8b8c85;
+  --color-line: #e6e4dc;
+
+  --color-sage-50: #f0f4f1;
+  --color-sage-100: #dde8e0;
+  --color-sage-200: #bcd2c2;
+  --color-sage-300: #97b9a2;
+  --color-sage-400: #729d80;
+  --color-sage-500: #547c62;
+  --color-sage-600: #43634f;
+  --color-sage-700: #375040;
+  --color-sage-800: #2c4034;
+  --color-sage-900: #1f2e26;
+
+  --color-blush: #f3d9d1;
+
+  --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fade-in 1s ease forwards;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-feature-settings: "ss01" 1, "cv05" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-sage-200);
+    color: var(--color-sage-900);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .container-px {
+    padding-left: clamp(1.25rem, 5vw, 6rem);
+    padding-right: clamp(1.25rem, 5vw, 6rem);
+  }
+}
