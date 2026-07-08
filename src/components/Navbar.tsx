@@ -9,7 +9,7 @@ const LINKS = [
   { href: '#inicio', label: 'Inicio' },
   { href: '#sobre-mi', label: 'Sobre mí' },
   { href: '#tratamientos', label: 'Tratamientos' },
-  { href: '#tecnologia', label: 'Tecnología' },
+  { href: '#pacientes', label: 'Pacientes' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
